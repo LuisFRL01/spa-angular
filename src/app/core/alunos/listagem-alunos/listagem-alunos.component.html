@@ -1,0 +1,33 @@
+<div *ngIf="alunos.length; else semRegistro">
+    <table class="table table-striped">
+        <thead>
+            <th>Imagem de perfil</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Data de Nascimento</th>
+            <th>Curso</th>
+            <th>Opções</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunos">
+                <td>
+                    <img mat-card-image [src]="aluno.urlFoto" width="100" height="100">
+                </td>
+                <td>{{aluno.nome}}</td>
+                <td>{{aluno.email}}</td>
+                <td>{{aluno.dtNascimento}}</td>
+                <td>{{aluno.curso}}</td>
+                <td>
+                    <button mat-raised-button color="primary" (click)="editar(aluno.id)">Editar</button>
+                    <button mat-raised-button color="warn" (click)="excluir(aluno.id)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #semRegistro>
+    <h1>
+        Nenhum Registro Encontrado!
+    </h1>
+</ng-template>

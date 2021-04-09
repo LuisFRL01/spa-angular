@@ -1,0 +1,12 @@
+{
+  "alunos": [
+    {
+      "nome": "Gabriel Gomes",
+      "email": "gabriel@gmail.com",
+      "urlFoto": "https://img.ibxk.com.br/2017/06/22/22100428046161.jpg?w=1200&h=675&mode=crop&scale=both",
+      "dtNascimento": "1997-07-11T03:00:00.000Z",
+      "curso": "Curso de C#",
+      "id": 1
+    }
+  ]
+}

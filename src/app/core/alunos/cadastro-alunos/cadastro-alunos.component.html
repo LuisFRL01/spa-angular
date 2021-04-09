@@ -1,0 +1,18 @@
+<div *ngIf="cadastro">
+    <form [formGroup]="cadastro" novalidate (ngSubmit)="submit()" (ngReset)="reiniciarForm()">
+        <mat-card-content>
+            <spa-input-text titulo="Nome *" controlName="nome" [formGroup]="cadastro"></spa-input-text>
+            <spa-input-text titulo="Email *" controlName="email" [formGroup]="cadastro"></spa-input-text>
+            <spa-input-text titulo="Link imagem de perfil *" controlName="urlFoto" [formGroup]="cadastro">
+            </spa-input-text>
+            <spa-input-date titulo="Data de nascimento *" controlName="dtNascimento" [formGroup]="cadastro">
+            </spa-input-date>
+            <spa-input-select titulo="Curso *" [opcoes]="cursos" controlName="curso" [formGroup]="cadastro">
+            </spa-input-select>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" color="primary" mat-raised-button>Salvar</button>
+            <button type="reset" color="warn" mat-raised-button>Cancelar</button>
+        </mat-card-actions>
+    </form>
+</div>
